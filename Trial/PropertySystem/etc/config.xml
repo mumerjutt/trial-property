@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* @copyriht Copyright (c) 2022 Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 7/3/22
+* Time: 8:42 AM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <propertysystem>
+            <general>
+                <api_url>https://trial.craig.mtcserver15.com/api/properties</api_url>
+                <api_key>2S7rhsaq9X1cnfkMCPHX64YsWYyfe1he</api_key>
+                <api_page_size>100</api_page_size>
+            </general>
+        </propertysystem>
+    </default>
+</config>
