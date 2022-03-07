@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* @copyriht Copyright (c) 2022 Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 6/3/22
+* Time: 3:24 PM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Trial_PropertySystem"/>
+</config>

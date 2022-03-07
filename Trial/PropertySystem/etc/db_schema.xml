@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* @copyriht Copyright (c) 2022 Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 6/3/22
+* Time: 3:27 PM
+*/
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="property" resource="default" engine="innodb" comment="Create Property Table">
+        <column xsi:type="smallint" name="entity_id" padding="10" identity="true" unsigned="true" nullable="false" comment="Property ID"/>
+        <column xsi:type="varchar" name="uuid" nullable="false" length="255" comment="UUID"/>
+        <column xsi:type="varchar" name="county" nullable="false" length="255" comment="County"/>
+        <column xsi:type="varchar" name="country" nullable="false" length="255" comment="Country"/>
+        <column xsi:type="varchar" name="town" nullable="false" length="255" comment="Town"/>
+        <column xsi:type="varchar" name="description" nullable="true" length="255" comment="Description"/>
+        <column xsi:type="varchar" name="address" nullable="false" length="255" comment="Address"/>
+        <column xsi:type="varchar" name="image_full" nullable="true" length="255" comment="Image Full"/>
+        <column xsi:type="varchar" name="image_thumbnail" nullable="true" length="255" comment="Image Thumbnail"/>
+        <column xsi:type="varchar" name="latitude" nullable="false" length="255" comment="Latitude"/>
+        <column xsi:type="varchar" name="longitude" nullable="false" length="255" comment="Longitude"/>
+        <column xsi:type="smallint" name="num_bedrooms" padding="10" unsigned="true" identity="false" nullable="false" default="0" comment="Number of bedrooms"/>
+        <column xsi:type="smallint" name="num_bathrooms" padding="10" unsigned="true" identity="false" nullable="false" default="0" comment="Number of bathrooms"/>
+        <column xsi:type="decimal" name="price" scale="6" precision="20" unsigned="false" nullable="false" default="0"
+                comment="Price"/>
+        <column xsi:type="varchar" name="type" nullable="false" length="255" comment="Type"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" comment="Created at" default="CURRENT_TIMESTAMP"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" comment="Updated at" default="CURRENT_TIMESTAMP"/>
+        <column xsi:type="smallint" name="property_type_id" padding="5" unsigned="true" nullable="false" identity="false" comment="Property Type ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="PROPERTY_UUID">
+            <column name="uuid"/>
+        </constraint>
+        <index referenceId="PROPERTY_UUID_DESCRIPTION" indexType="fulltext">
+            <column name="uuid"/>
+            <column name="description"/>
+        </index>
+        <constraint xsi:type="foreign" referenceId="PROPERTY_PROPERTY_TYPE_ID_PROPERTY_TYPE_TYPE_ID" table="property" column="property_type_id" referenceTable="property_type" referenceColumn="type_id"/>
+    </table>
+    <table name="property_type" resource="default" engine="innodb" comment="Property Type">
+        <column xsi:type="smallint" name="id" padding="10" identity="true" unsigned="true" nullable="false" comment="ID"/>
+        <column xsi:type="smallint" name="type_id" padding="10" identity="false" unsigned="true" nullable="false" comment="Type ID"/>
+        <column xsi:type="varchar" name="title" nullable="true" length="255" comment="Title"/>
+        <column xsi:type="varchar" name="description" nullable="true" length="255" comment="Description"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" comment="Created at" default="CURRENT_TIMESTAMP"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" comment="Updated at" default="CURRENT_TIMESTAMP"/>
+        <index referenceId="PROPERTY_TYPE_TITLE" indexType="btree">
+            <column name="title"/>
+        </index>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="PROPERTY_TYPE_TYPE_ID">
+            <column name="type_id"/>
+        </constraint>
+    </table>
+</schema>

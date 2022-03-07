@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 3/3/22
+* Time: 4:56 PM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <update id="Trial_Extensions::trialextensions" title="Trial Extension" module="Magento_Backend" sortOrder="400" resource="Trial_Extensions::trialextensions"/>
+        <add id="Trial_PropertySystem::main_menu" title="Property System" module="Trial_PropertySystem" sortOrder="10" parent="Trial_Extensions::trialextensions" resource="Trial_PropertySystem::main_menu"/>
+        <add id="Trial_PropertySystem::properties" title="Manage Properties" module="Trial_PropertySystem" sortOrder="20" parent="Trial_PropertySystem::main_menu" action="properties/properties/index" resource="Trial_PropertySystem::properties"/>
+    </menu>
+</config>

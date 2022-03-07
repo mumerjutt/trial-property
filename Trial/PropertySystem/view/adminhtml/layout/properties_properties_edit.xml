@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* @copyriht Copyright (c) 2022 Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 7/3/22
+* Time: 6:36 AM
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="property_form"/>
+        </referenceContainer>
+    </body>
+</page>

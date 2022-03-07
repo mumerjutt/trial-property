@@ -1,0 +1,49 @@
+{
+    "property": {
+        "column": {
+            "entity_id": true,
+            "uuid": true,
+            "county": true,
+            "country": true,
+            "town": true,
+            "description": true,
+            "address": true,
+            "image_full": true,
+            "image_thumbnail": true,
+            "latitude": true,
+            "longitude": true,
+            "num_bedrooms": true,
+            "num_bathrooms": true,
+            "price": true,
+            "type": true,
+            "created_at": true,
+            "updated_at": true,
+            "property_type_id": true
+        },
+        "index": {
+            "PROPERTY_UUID_DESCRIPTION": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "PROPERTY_UUID": true,
+            "PROPERTY_PROPERTY_TYPE_ID_PROPERTY_TYPE_TYPE_ID": true
+        }
+    },
+    "property_type": {
+        "column": {
+            "type_id": true,
+            "title": true,
+            "description": true,
+            "created_at": true,
+            "updated_at": true,
+            "id": true
+        },
+        "index": {
+            "PROPERTY_TYPE_TITLE": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "PROPERTY_TYPE_TYPE_ID": true
+        }
+    }
+}

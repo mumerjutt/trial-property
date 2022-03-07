@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* @copyriht Copyright (c) 2022 Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 6/3/22
+* Time: 4:49 PM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Trial_Extensions::trialextensions" title="Trial Extension" sortOrder="101">
+                <resource id="Trial_PropertySystem::main_menu" title="Property System" sortOrder="100">
+                        <resource id="Trial_PropertySystem::properties" title="Manage Properties" sortOrder="20"/>
+                        </resource>
+                    </resource>
+
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Trial_PropertySystem::configuration" title="Property System Config" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

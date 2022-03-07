@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* @copyriht Copyright (c) 2022 Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 7/3/22
+* Time: 7:34 AM
+*/
+-->
+<config xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job instance="Trial\PropertySystem\Cron\SyncProperties" method="execute" name="trial_property_system_api">
+            <config_path>propertysystem/general/sync_time</config_path>
+        </job>
+    </group>
+</config>

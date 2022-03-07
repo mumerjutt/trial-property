@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Umer
+* Created by PhpStorm
+* User: Umer
+* Date: 3/3/22
+* Time: 4:56 PM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+   	<router id="admin">
+        <route id="properties" frontName="properties">
+            <module name="Trial_PropertySystem"/>
+        </route>
+    </router>
+</config>
